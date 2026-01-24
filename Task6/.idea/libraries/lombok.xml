@@ -25,6 +25,7 @@
       <root url="jar://$PROJECT_DIR$/libs/spring-webflux-5.3.9.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/spring-webmvc-5.3.9.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/spring-websocket-5.3.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/validation-api-2.0.1.Final.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/libs/spring-aop-5.3.9-javadoc.jar!/" />
@@ -85,5 +86,8 @@
       <root url="jar://$PROJECT_DIR$/libs/spring-webmvc-5.3.9-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/libs/spring-websocket-5.3.9-sources.jar!/" />
     </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$/libs" />
+    </excluded>
   </library>
 </component>

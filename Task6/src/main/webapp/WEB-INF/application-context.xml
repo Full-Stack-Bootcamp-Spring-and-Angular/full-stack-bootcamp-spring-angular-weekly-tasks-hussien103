@@ -12,9 +12,9 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <!-- inside application-context.xml -->
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:main/resources/application.properties" />
-    </bean>
+<!--    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+<!--        <property name="location" value="classpath:main/resources/application.properties" />-->
+<!--    </bean>-->
 
     <!-- Step 3: Define Spring MVC view resolver -->
     <bean
