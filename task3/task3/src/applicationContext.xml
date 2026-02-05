@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--    this is the dependency bean-->
+    <bean id="drawBean2d"
+          class="com.dependencyInjection.Draw2D">
+    </bean>
+
+    <bean id = "drawBean3d"
+          class="com.dependencyInjection.Draw3D">
+    </bean>
+
+    <!-- Setter injection -->
+    <bean id="square" class="com.dependencyInjection.Square" scope ="prototype">
+        <property name="draw2D" ref="drawBean2d"/>
+        <property name="draw3D" ref="drawBean3d"/>
+    </bean>
+
+
+
+   <bean id ="init-destory" class="com.dependencyInjection.DatabaseOperations" init-method="connectToDatabase" destroy-method="disconnectFromDatabase">
+
+   </bean>
+
+
+
+    <!-- constructor injection -->
+    <bean id="circle" class="com.dependencyInjection.Circle">
+        <constructor-arg ref="drawBean2d"/>
+        <constructor-arg ref="drawBean3d"/>
+
+    </bean>
+</beans>
+
+
+
+
+
